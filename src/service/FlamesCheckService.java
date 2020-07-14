@@ -14,12 +14,10 @@ import java.io.InputStreamReader;
 
 public class FlamesCheckService{
 	public char findFlames(String name1, String name2){
-		
-		char[] evaluated=new char[20];
-		StringBuffer str1=new StringBuffer(name1);//s1
-		StringBuffer str2=new StringBuffer(name1);//s2
-		int str1len=str1.length();//a
-        int str2len=str2.length();//b
+		StringBuffer str1=new StringBuffer(name1);
+		StringBuffer str2=new StringBuffer(name1);
+		int str1len=str1.length();
+        int str2len=str2.length();
        for(int i=0;i<str1len;i++)
         {
                 char c=str1.charAt(i);
@@ -33,8 +31,7 @@ public class FlamesCheckService{
                                  str2.deleteCharAt(j);    
                                  str1len=str1.length();
                                  str2len=str2.length();
-                                 i=0;
-                                 j=0;
+                                break;
                             
                         }
                                         }
